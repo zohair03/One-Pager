@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
             <div className="flex flex-col gap-2 justify-center items-center">
               <p className="label font-semibold">Why Us</p>
               <h2 className="max-[380px]:text-2xl text-h2 md:text-3xl lg:text-4xl  font-serif sm:text-3xl text-center max-[380px]:leading-12 leading-13 sm:leading-11 lg:leading-16">
-                Why Choose RN Infotech?
+                Why Tech Professionals Choose RN Infotech
               </h2>
             </div>
 
@@ -32,8 +32,7 @@ const WhyChooseUs = () => {
                 </div>
                 <div className="flex flex-col gap-3 items-start">
                   <p className="max-[380px]:text-sm text-bodytext text-base w-95/100 md:text-lg lg:text-xl xl:text-lg 2xl:text-xl">
-                    30+ Years of Experience Over three decades of trusted laptop
-                    repair and services in Mumbai — quality you can count on.
+                    Diverse Inventory: From the smallest mobile chip to massive server racks, we house everything under one roof.
                   </p>
                   <Link
                     href="/"
@@ -62,15 +61,13 @@ const WhyChooseUs = () => {
                 </div>
                 <div className="flex flex-col gap-3 items-start">
                   <p className="max-[380px]:text-sm text-bodytext text-base w-95/100 md:text-lg lg:text-xl xl:text-lg 2xl:text-xl">
-                    Safe & Trusted Service A certified service centre that
-                    handles your device with care. Drop it off with complete
-                    peace of mind.
+                    Quality Assured: We only deal in genuine parts and components from trusted global brands.
                   </p>
                   <Link
                     href="/"
                     className="flex justify-center items-center text-primary font-bold font-sans text-base md:text-base"
                   >
-                    Laptop Repair in Mumbai
+                    Testimonials
                     <Image
                       src="/icons/right-icon.svg"
                       alt="Arrow Icon"
@@ -93,8 +90,7 @@ const WhyChooseUs = () => {
                 </div>
                 <div className="flex flex-col gap-3 items-start">
                   <p className="max-[380px]:text-sm text-bodytext text-base w-95/100 md:text-lg lg:text-xl xl:text-lg 2xl:text-xl">
-                    Customer Satisfaction First Our dedicated staff go the extra
-                    mile to make sure every customer leaves happy, every time.
+                    Outstanding Support: Our background in retail services ensures you get help when you need it most.
                   </p>
                   <Link
                     href="/"

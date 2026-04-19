@@ -12,33 +12,27 @@ import Faqs from "@/components/sections/faqSection";
 const faqs = [
   {
     id: 1,
-    question: "How long will it take to repair my laptop?",
+    question: "Do you provide bulk components for businesses?",
     answer:
-      "It generally takes 2 to 3 business days to repair a laptop. However, the exact time may vary depending on the issue. We recommend discussing the service time before dropping off your device.",
+      "Yes, we specialise in server systems and networking components for both SMEs and large enterprises.",
   },
   {
     id: 2,
-    question: "Is it safe to give my laptop to RN Infotech for repairs?",
+    question: "Can I buy parts online?",
     answer:
-      "Absolutely! RN Infotech is a certified and trusted service centre in Mumbai. Your laptop is handled with the utmost care and professionalism — you can leave it with us without any worries.",
+      "Absolutely. Our platform is designed for seamless online retail across India.",
   },
   {
     id: 3,
-    question: "How can I find RN Infotech?",
+    question: "Where is your physical office located?",
     answer:
-      "We are located at Tara Temple Lane, Leamington Road, Grant Road, Mumbai. We are easily accessible by all modes of transport.",
+      "We are located at Jaraganahalli Grama Main Road, Bengaluru.",
   },
   {
     id: 4,
-    question: "Do I need to bring my AC adapter along?",
+    question: "Do you offer returns?",
     answer:
-      "Yes, it is recommended to bring your AC adapter. This helps our technician check the voltage and current, allowing for a more accurate diagnosis of the issue.",
-  },
-  {
-    id: 5,
-    question: "Do you charge extra for home service?",
-    answer:
-      "No, we do not charge additionally for home service. You only need to pay the standard visiting charges. Our technician will come to your doorstep at your convenience.",
+      "Yes, we have a clear Cancellation & Return policy available in our footer section.",
   },
 ];
 

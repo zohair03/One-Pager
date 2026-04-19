@@ -9,7 +9,7 @@ const primaryBtn = ({ btnText, onClick, href, custom, type, disabled }) => {
         type={type}
         onClick={onClick}
         disabled={disabled}
-        className={`${custom} cursor-pointer font-serif font-extralight text-[12px] bg-primary hover:bg-[#43b1f5] disabled:bg-gray-400 disabled:cursor-not-allowed text-secondary rounded-full px-8 transition-all ease-in-out duration-300 min-w-[90%] md:min-w-[220px] min-h-[50px] flex items-center justify-center`}
+        className={`${custom} cursor-pointer font-serif font-extralight text-[12px] bg-primary hover:bg-[#f7875b] disabled:bg-gray-400 disabled:cursor-not-allowed text-secondary rounded-full px-8 transition-all ease-in-out duration-300 min-w-[90%] md:min-w-[220px] min-h-[50px] flex items-center justify-center`}
       >
         {btnText}
       </button>
@@ -20,7 +20,7 @@ const primaryBtn = ({ btnText, onClick, href, custom, type, disabled }) => {
   return (
     <Link
       href={href || "/"}
-      className={`${custom} cursor-pointer font-serif font-extralight text-[12px] bg-primary hover:bg-[#43b1f5] text-secondary rounded-full px-8 transition-all ease-in-out duration-300 min-w-[90%] md:min-w-[220px] min-h-[50px] flex items-center justify-center`}
+      className={`${custom} cursor-pointer font-serif font-extralight text-[12px] bg-primary hover:bg-[#f7875b] text-secondary rounded-full px-8 transition-all ease-in-out duration-300 min-w-[90%] md:min-w-[220px] min-h-[50px] flex items-center justify-center`}
     >
       {btnText}
     </Link>

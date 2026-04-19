@@ -9,7 +9,7 @@ const MapSection = () => {
     <div className="p-0 w-full">
       <div className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
         <iframe
-          src={`https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d235.8333348776747!2d72.8172658141857!3d18.9608795921426!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf06ab665385%3A0xd876d17c77a5c4e!2sAcer%20Mall%20-%20Exclusive%20Store!5e0!3m2!1sen!2sin!4v1773403549729!5m2!1sen!2sin`}
+          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d427061.8394185433!2d77.301264927645!3d12.954459534995346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1776619966909!5m2!1sen!2sin`}
           width="100%"
           height="100%"
           style={{ border: 0 }}

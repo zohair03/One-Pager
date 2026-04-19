@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import TopBar from "./topBar";
@@ -115,7 +116,13 @@ const Navbar = () => {
               href="/"
               className="font-semibold text-3xl md:text-4xl xl:text-3xl 2xl:text-5xl"
             >
-              <span className="text-white">Logo</span>
+              <Image
+                src="/images/logo.png"
+                alt="Company Logo"
+                width={200}
+                height={200}
+                className=""
+              />
             </Link>
           </div>
 

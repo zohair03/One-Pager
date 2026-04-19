@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const TopBar = () => {
   return (
-    <div className="2xl:px-30 flex justify-between items-center max-[380px]:px-2 py-2 px-4 md:px-8 bg-secondary text-white font-medium">
+    <div className="2xl:px-30 flex justify-between items-center max-[380px]:px-2 py-2 px-4 md:px-8 bg-[#1d1613] text-white font-medium">
       {/* Reviews */}
       <div className="flex gap-1 items-center w-fit">
         <div className="max-[380px]:text-[14px] text-[16px] md:text-[16px] font-bold">5.0</div>
@@ -42,7 +42,7 @@ const TopBar = () => {
           target="_blank"
           className="max-[380px]:text-xs text-sm lg:text-lg xl:text-base"
         >
-          Location
+          Jaraganahalli, Bengaluru
         </Link>
       </div>
     </div>

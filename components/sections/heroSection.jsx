@@ -12,20 +12,18 @@ const Hero = () => {
             
             {/* Heading */}
             <h1 className="flex justify-center items-center font-serif text-color-herotext max-[380px]:text-xl text-[25px] pt-25 sm:text-5xl md:text-4xl lg:text-5xl xl:text-4xl 2xl:text-6xl text-center sm:w-4/5 max-[380px]:leading-10 leading-12 md:leading-16 lg:leading-18 xl:leading-18 2xl:leading-28">
-              Get Your MacBook Back to Life with RN Infotech’s Expert Service
+              Your Trusted Partner for Next-Gen Tech & Networking
             </h1>
 
             {/* Subtext */}
             <p className="max-[450px]:mt-[-5px] mt-[-20px] mb-[15px] font-sans max-[380px]:w-full w-[90%] max-[380px]:text-sm text-lg 2xl:text-2xl leading-6 max-[380px]:leading-5 md:leading-7 2xl:leading-8 sm:w-4/5 md:w-3/5 text-center text-base sm:text-lg md:text-xl lg:text-2xl xl:text-xl text-white">
-              Serving Mumbai since 2008, RN Infotech provides expert
-              diagnostics, genuine parts, and customer-first computer repair
-              solutions
+              From high-performance laptops and mobile parts to enterprise-grade server systems, RN Infotech delivers quality hardware and networking components right to your doorstep
             </p>
 
             {/* Buttons */}
             <div className="w-[90%] md:w-fit flex flex-col sm:flex-row gap-5 md:gap-5">
               <PrimaryBtn href="/" btnText="View Services"/>
-              <SecondaryBtn href="/" custom="border border-light-blue" btnText="Talk to a Technician"/>
+              <SecondaryBtn href="/" custom="border border-light-blue" btnText="Shop Now"/>
             </div>
 
           </div>

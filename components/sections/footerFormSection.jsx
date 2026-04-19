@@ -7,22 +7,22 @@ const contactInfo = [
   {
     icon: "/icons/call.svg",
     alt: "call icon",
-    text: "+91 88797 32594",
-    link: "tel:+91 88797 32594",
+    text: "+91 9535216410",
+    link: "tel:+91 9535216410",
     border: true,
   },
   {
     icon: "/icons/mail.svg",
     alt: "email icon",
-    text: "rninfotechrepair@gmail.com",
-    link: "mailto:rninfotechrepair@gmail.com",
+    text: "ramesh.kumar@rninfotech.co.in",
+    link: "mailto:ramesh.kumar@rninfotech.co.in",
     border: true,
   },
   {
     icon: "/icons/location.svg",
     alt: "location icon",
-    text: "Room No. 17, Babu Building 1st Floor, Tara Temple Lane, Leamington Road, Grant Road, Mumbai-400007, Maharashtra",
-    link: "https://www.google.com/maps/place/Lamington+Rd,+Mumbai,+Maharashtra/@18.9623965,72.8152546,17z/data=!4m6!3m5!1s0x3be7ce12e0ccf523:0x28e71cda40d36bb6!8m2!3d18.9625768!4d72.8179075!16zL20vMDlmcXl4?entry=ttu&g_ep=EgoyMDI2MDQwNS4wIKXMDSoASAFQAw%3D%3D",
+    text: "23/2, Jaraganahalli Grama Main road, GKM College Road, Jaraganahalli, Bengaluru, Karnataka, 560078",
+    link: "",
     border: true,
   },
 ];
@@ -34,11 +34,10 @@ const FooterForm = () => {
       <div className="flex flex-col gap-5 items-start w-full lg:w-1/2 rounded-2xl shadow-md p-6 md:p-10 bg-white border border-color">
         <div className="flex flex-col gap-3">
           <h3 className="font-serif text-xl md:text-2xl 2xl:text-3xl text-color-h3">
-            Contact Us Today
+            Contact Our Experts
           </h3>
           <p className="w-full md:w-[80%] font-sans text-base md:text-[18px] font-medium text-black/70">
-            Achieve your skincare goals with personalized guidance from our
-            experts.
+            Whether you have questions about our services, need assistance with
           </p>
         </div>
 
@@ -110,8 +109,7 @@ const FooterForm = () => {
             Send Us A Message
           </h3>
           <p className="w-full md:w-[80%] font-sans text-base md:text-[18px] font-medium text-black/70">
-            Achieve your skincare goals with personalized guidance from our
-            experts.
+            Have a question or need assistance? Fill out the form below and our
           </p>
         </div>
 

@@ -14,27 +14,27 @@ export const aboutLinks = [
   {
     title: "Gallery",
     description: "Explore Our Repair Gallery: Before & After Transformations",
-    image: "/images/rn-infotech-shop-02.webp",
+    image: "/images/rn-infotech-23.webp",
     href: "/",
   },
 ];
 
 export const servicesLinks = [
   {
-    title: "Macbook Repair",
-    description: "Fast & Reliable Laptop Repair in Mumbai",
+    title: "Server Systems & Networking",
+    description: "Comprehensive Server Systems & Networking Solutions in Mumbai",
     image: "/images/rn-infotech-27.webp",
     href: "/",
   },
   {
-    title: "Second Hand Laptops",
-    description: "Affordable, Quality-Tested Second Hand Laptops in Mumbai",
+    title: "Computer & Desktop Parts",
+    description: "Expert Computer & Desktop Repair Services in Mumbai",
     image: "/images/rn-infotech-21.webp",
     href: "/",
   },
   {
-    title: "Ram & Storage Upgrade",
-    description: "Supercharge Your Laptop's Performance",
+    title: "Mobile Parts & Accessories",
+    description: "Upgrade Your Laptop's Performance with RAM & Storage Upgrades in Mumbai",
     image: "/images/rn-infotech-36.webp",
     href: "/",
   },

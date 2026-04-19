@@ -9,56 +9,29 @@ import styles from "./servicesSection.module.css";
 const services = [
   {
     id: "01",
-    title: "MacBook Pro/Air Repair",
+    title: "Server Systems & Networking",
     description:
-      "From hardware failures to software crashes, our expert technicians diagnose and fix all laptop issues quickly and efficiently. Most repairs done within 2–3 business days.",
+      "We are specialists in server deployment and high-quality networking components to keep your business connected.",
     image: "/images/rn-infotech-30.webp",
-    btnText: "MacBook Repair",
+    btnText: "Server Systems & Networking",
     href: "/",
   },
   {
     id: "02",
-    title: "Windows Laptop Repair",
+    title: "Computer & Desktop Parts",
     description:
-      "Boost your laptop's performance with a RAM or storage upgrade. We recommend and install the best compatible options for your device.",
+      "Authorized dealers for all desktop models and internal components. Whether it's a RAM upgrade or a custom build, we’ve got you covered.",
     image: "/images/rn-infotech-37.webp",
-    btnText: "Windows Laptop Repair",
+    btnText: "Computer & Desktop Parts",
     href: "/",
   },
   {
     id: "03",
-    title: "iMac & Desktop Computer Repair",
+    title: "Mobile Parts & Accessories",
     description:
-      "Boost your laptop's performance with a RAM or storage upgrade. We recommend and install the best compatible options for your device.",
+      "A comprehensive range of genuine parts for all major mobile brands.",
     image: "/images/rn-infotech-57.webp",
-    btnText: "iMac & Desktop Repair",
-    href: "/",
-  },
-  {
-    id: "04",
-    title: "Apple & Windows Laptop Spare Parts",
-    description:
-      "Boost your laptop's performance with a RAM or storage upgrade. We recommend and install the best compatible options for your device.",
-    image: "/images/rn-infotech-70.webp",
-    btnText: "Laptop Spare Parts",
-    href: "/",
-  },
-  {
-    id: "05",
-    title: "Second Hand Laptops",
-    description:
-      "Get a quality-tested, affordable second-hand laptop that fits your budget. Perfect for students, freelancers, and small businesses looking for value.",
-    image: "/images/rn-infotech-shop-08.webp",
-    btnText: "Second Hand Laptops",
-    href: "/",
-  },
-  {
-    id: "06",
-    title: "RAM & Storage Upgrade",
-    description:
-      "Boost your laptop's performance with a RAM or storage upgrade. We recommend and install the best compatible options for your device.",
-    image: "/images/rn-infotech-ram.webp",
-    btnText: "RAM & Storage Upgrade",
+    btnText: "Mobile Parts & Accessories",
     href: "/",
   },
 ];
@@ -147,7 +120,7 @@ const Services = () => {
     <section
       ref={ref}
       className="py-8 px-6 sm:px-8 lg:py-12 lg:px-16 2xl:px-35"
-      style={{ boxShadow: "inset 0 50px 40px -10px #bfdbfe" }}
+      style={{ boxShadow: "inset 0 50px 40px -10px #facdbe" }}
     >
       {/* Header with fade-in animation */}
       <div className={`flex flex-col items-center gap-4 mb-8 md:mb-10 transition-all duration-700 ease-out
@@ -155,7 +128,7 @@ const Services = () => {
         <div className="flex flex-col gap-2">
           <p className="label text-center font-semibold">What We Do</p>
           <h2 className="text-black text-h2 font-serif sm:text-3xl lg:text-4xl">
-            Our Services
+            Expert Solutions for Home & Enterprise
           </h2>
         </div>
         <p className="text-black/80 text-center font-sans text-lg lg:text-xl max-w-2xl">

@@ -22,9 +22,9 @@ const servicesLinks1 = [
 
 const servicesLinks2 = [];
 
-const FooterLinks = () => {
+const   FooterLinks = () => {
   return (
-    <footer className="bg-gradient-to-t from-[#001f4d] via-secondary to-[#003d7a] text-white font-sans">
+    <footer className="bg-gradient-to-t from-[#290e04]  to-[#2e221e] text-white font-sans">
       {/* Main Footer */}
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-6 px-6 sm:px-10 lg:px-16 py-12 lg:py-16">
         {/* Col 1 - Logo + CTA + Social */}
@@ -35,7 +35,13 @@ const FooterLinks = () => {
               href="/"
               className="logo-glow text-5xl lg:text-3xl xl:text-5xl text-red-500"
             >
-              <span className="text-white">Logo</span>
+              <Image
+                src="/images/logo.png"
+                alt="Company Logo"
+                width={250}
+                height={250}
+                className=""
+              />
             </Link>
           </div>
 
@@ -47,58 +53,58 @@ const FooterLinks = () => {
           {/* Social Icons */}
           <div className="flex gap-4">
             <Link
-              href=""
+              href="https://x.com"
               target="_blank"
               className="transition-transform duration-600 hover:-translate-y-1 text-white hover:text-primary transition-colors flex flex-col items-center justify-center"
             >
               <Image
-                src="/icons/just-dial-logo.webp"
-                alt="Just Dial Logo"
+                src="/icons/Twitter.svg"
+                alt="twitter"
                 width={70}
                 height={70}
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ width: "auto", height: "auto" }}
                 className="icon-color"
               />
             </Link>
-            {/* <Link
+            <Link
               href="https://facebook.com"
               target="_blank"
               className="transition-transform duration-600 hover:-translate-y-1 text-white hover:text-primary transition-colors"
             >
               <Image
-                src="/icons/facebook.png"
+                src="/icons/Facebook.svg"
                 alt="Facebook"
-                width={30}
-                height={30}
-                className="icon-color"
+                width={28}
+                height={28}
+                className=""
               />
-            </Link> */}
-            {/* <Link
+            </Link>
+            <Link
               href="https://instagram.com"
               target="_blank"
               className="transition-transform duration-600 hover:-translate-y-1 text-white hover:text-primary transition-colors"
             >
               <Image
-                src="/icons/instagram.png"
+                src="/icons/Instagram.svg"
                 alt="Instagram"
                 width={30}
                 height={30}
-                className="icon-color"
+                className=""
               />
-            </Link> */}
-            {/* <Link
+            </Link>
+            <Link
               href="https://youtube.com"
               target="_blank"
               className="transition-transform duration-600 hover:-translate-y-1 text-white hover:text-primary transition-colors"
             >
               <Image
-                src="/icons/youtube.png"
+                src="/icons/Youtube.svg"
                 alt="YouTube"
                 width={30}
                 height={30}
-                className="icon-color"
+                className=""
               />
-            </Link> */}
+            </Link>
           </div>
         </div>
 
@@ -171,19 +177,19 @@ const FooterLinks = () => {
           </h4>
           <div className="flex flex-col gap-4">
             <p className="text-white/80 text-sm md:text-base hover:text-white transition-colors">
-              +91 88797 32594
+              +91 9535216410
             </p>
             <p className="text-white/80 text-sm md:text-base hover:text-white transition-colors">
-              rninfotechrepair@gmail.com
+              ramesh.kumar@rninfotech.co.in
             </p>
             <a
-              href="https://www.google.com/maps/place/Lamington+Rd,+Mumbai,+Maharashtra/@18.9623965,72.8152546,17z/data=!4m6!3m5!1s0x3be7ce12e0ccf523:0x28e71cda40d36bb6!8m2!3d18.9625768!4d72.8179075!16zL20vMDlmcXl4?entry=ttu&g_ep=EgoyMDI2MDQwNS4wIKXMDSoASAFQAw%3D%3D"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/80 text-sm md:text-base leading-relaxed hover:text-white transition-colors"
             >
-              Room No. 17, Babu Building 1st Floor, Tara Temple Lane, Leamington
-              Road, Grant Road, Mumbai-400007, Maharashtra
+              23/2, Jaraganahalli Grama Main road, GKM College Road,
+              Jaraganahalli, Bengaluru, Karnataka, 560078
             </a>
           </div>
         </div>
@@ -196,10 +202,7 @@ const FooterLinks = () => {
           licensors
         </p>
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/70">
-          <Link
-            href="/privacy-policy"
-            className="hover:text-white transition-colors"
-          >
+          <Link href="/" className="hover:text-white transition-colors">
             Privacy Policy
           </Link>
           <Link href="" className="hover:text-white transition-colors">

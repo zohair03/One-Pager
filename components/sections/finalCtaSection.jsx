@@ -4,11 +4,11 @@ import CallButton from "../ui/buttons/callButton";
 
 const FinalCta = ({
   label = "Get In Touch",
-  title = "Ready to Fix Your Laptop?",
-  subtitle = "Don't let a broken laptop slow you down. Visit us at Grant Road, Mumbai or book a home service today — we're here to help!",
+  title = "Ready to Upgrade Your Tech Stack?",
+  subtitle = "Join thousands of satisfied customers and businesses who trust RN Infotech for their hardware needs.",
   cta1 = "Call Us Now",
   href1,
-  cta2 = "Book Home Service",
+  cta2 = "Get a Quote Today",
   href2 = "/",
   image = "bg-[url('/images/rn-infotech-final-bg.webp')]",
   height = "min-sm:h-[70vh]",

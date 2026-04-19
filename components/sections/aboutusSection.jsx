@@ -10,7 +10,7 @@ const AboutUs = () => {
           <div className="flex flex-col gap-2">
             <p className="label font-semibold">Who We Are</p>
             <h2 className="max-[380px]:text-2xl text-h2 font-serif sm:text-3xl md:text-3xl lg:text-4xl normal-case">
-              About RN Infotech
+              The Journey of RN Infotech
             </h2>
           </div>
         </div>
@@ -46,14 +46,7 @@ const AboutUs = () => {
 
           <div className="flex flex-col gap-6 w-full lg:w-1/2 text-center lg:text-left items-center lg:items-start">
             <p className="max-[380px]:text-sm text-lg 2xl:text-xl text-start font-sans">
-              Established in 2008, RN Infotech is one of Mumbai's leading names
-              in laptop repair and computer services. Located at Tara Temple
-              Lane, Grant Road, we have been serving customers from across
-              Mumbai for over three decades — building trust, one repair at a
-              time. We are a one-stop destination for all your laptop needs —
-              whether it's a quick fix, a spare part, or an affordable
-              second-hand laptop. Our dedicated team of skilled technicians and
-              courteous staff ensure that every customer walks away satisfied.
+              RN Infotech is a leading Private Limited company based in Bengaluru. What started as a focused mobile retail venture has evolved into a powerhouse for electronics, laptops, and enterprise networking. Our growth is fueled by a commitment to providing high-quality tech products with the convenience of online retail. We bridge the gap between complex technology and the end-user.
             </p>
             <PrimaryBtn href="/" btnText="Contact Us" />
           </div>
