@@ -3,16 +3,16 @@ import Link from "next/link";
 
 const TopBar = () => {
   return (
-    <div className="flex justify-between items-center py-1.5 px-4 md:px-8 2xl:px-30 bg-[#370f02] border-b border-[rgba(247,109,54,0.15)] text-[0.75rem] text-white/75 relative">
+    <div className="bg-black/40 backdrop-blur-2xl border-b-1  border-[#ffffff1a] flex justify-between items-center py-1.5 px-4 md:px-8 2xl:px-30  text-[0.75rem] text-white/75 relative">
       {/* Subtle bottom glow line */}
-      <div
+      {/* <div
         className="absolute bottom-0 left-[10%] right-[10%] h-px pointer-events-none"
         style={{
           background:
             "linear-gradient(90deg, transparent 0%, rgba(247,109,54,0.3) 30%, rgba(247,109,54,0.5) 50%, rgba(247,109,54,0.3) 70%, transparent 100%)",
         }}
         aria-hidden="true"
-      />
+      /> */}
 
       {/* Left group: Reviews + Phone */}
       <div className="flex items-center gap-1.5">
@@ -74,3 +74,5 @@ const TopBar = () => {
 };
 
 export default TopBar;
+
+// bg-[#370f02] border-b border-[rgba(247,109,54,0.15)]

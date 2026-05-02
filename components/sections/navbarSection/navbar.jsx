@@ -107,7 +107,7 @@ const Navbar = () => {
 
         {/* Main Navbar */}
         <div
-          className="relative flex justify-between items-center px-4 md:px-8 2xl:px-30 py-3 md:py-4 bg-black/40 backdrop-blur-2xl border-b-1  border-[#ffffff1a]"
+          className="relative flex justify-between items-center px-4 md:px-8 2xl:px-30 py-3 md:py-4"
           onMouseLeave={closeMega}
         >
           {/* Logo */}
@@ -181,3 +181,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// bg-black/40 backdrop-blur-2xl border-b-1  border-[#ffffff1a]
