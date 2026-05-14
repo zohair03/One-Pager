@@ -1,27 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const TopBar = () => {
+const TopBar = ({ menuOpen, toggleMenu }) => {
   return (
-    <div className="flex justify-between items-center pt-3 px-4 md:px-8 2xl:px-30  text-[0.75rem] text-white/75 relative">
-      {/* Subtle bottom glow line */}
-      {/* <div
-        className="absolute bottom-0 left-[10%] right-[10%] h-px pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent 0%, rgba(247,109,54,0.3) 30%, rgba(247,109,54,0.5) 50%, rgba(247,109,54,0.3) 70%, transparent 100%)",
-        }}
-        aria-hidden="true"
-      /> */}
-
-      {/* Left group: Reviews + Phone */}
-      <div className="liquid-glass-strong-light rounded-full py-1 px-3 flex items-center gap-1.5">
-        {/* Rating */}
-        <div className="flex items-center gap-1">
-          <span className="font-bold text-base text-white tracking-tight">
+    <div className="bg-[#DED2FF] flex justify-between items-center py-3 px-4 md:px-8 2xl:px-30 relative border-b border-black/5">
+      {/* Left group: Reviews */}
+      <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-base text-black tracking-tight">
             5.0
           </span>
-          <div className="flex items-center gap-px px-0.5">
+          <div className="flex items-center gap-0.5">
             {[...Array(5)].map((_, i) => (
               <Image
                 key={i}
@@ -34,45 +23,60 @@ const TopBar = () => {
             ))}
           </div>
           <Link
-            href="https://www.google.com/maps/place/Lamington+Rd,+Mumbai,+Maharashtra/@18.9623965,72.8152546,17z"
-            target="_blank"
-            className="text-[0.7rem] text-white/50 hover:text-primary transition-colors duration-200"
+            href="#"
+            className="text-[0.85rem] text-black/80 underline decoration-black/30 underline-offset-2 hover:text-primary transition-colors"
           >
-            (42)
+            (42 Reviews)
           </Link>
         </div>
       </div>
 
-      {/* Right group: Location */}
-      <div className="liquid-glass-strong-light rounded-full py-1 px-3 flex items-center">
-        <Link
-          href="https://www.google.com/maps/place/Lamington+Rd,+Mumbai,+Maharashtra/@18.9623965,72.8152546,17z"
-          target="_blank"
-          className="flex items-center gap-1.5 text-white/70 hover:text-primary transition-colors duration-200 text-[0.75rem]"
+      {/* Right group: Location + Phone (Desktop) or Hamburger (Mobile) */}
+      <div className="flex items-center">
+        {/* Desktop Info */}
+        <div className="hidden lg:flex items-center">
+          {/* Location */}
+          <div className="flex items-center gap-2 px-6 border-l border-black/10">
+            <Image
+              src="/icons/location-fill.svg"
+              alt="Location"
+              width={18}
+              height={18}
+              className="opacity-70"
+            />
+            <p className="text-[0.85rem] text-black/80 font-medium">
+              Proudly Serving: <span className="font-bold">San Francisco, Marin, Napa</span>
+            </p>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-center gap-2 px-6 border-l border-black/10">
+            <Image
+              src="/icons/call.svg"
+              alt="Phone"
+              width={18}
+              height={18}
+              className="opacity-70"
+            />
+            <p className="text-[0.85rem] text-black/80 font-medium">
+              Call or Text: <span className="font-bold">(415) 555-7777</span>
+            </p>
+          </div>
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          className="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer bg-transparent border-l border-black/10 pl-4 ml-2"
+          onClick={toggleMenu}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
-          {/* <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="opacity-65 shrink-0"
-          >
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-          </svg> */}
-          <Image
-            src="/icons/location.svg"
-            alt="Location"
-            width={18}
-            height={18}
-            className="color-location"
-          />
-          <span className="text-base">Jaraganahalli, Bengaluru</span>
-        </Link>
+          <div className={`w-6 h-0.5 bg-black transition-all ${menuOpen ? "rotate-45 translate-y-1.5" : ""}`} />
+          <div className={`w-6 h-0.5 bg-black transition-all ${menuOpen ? "opacity-0" : ""}`} />
+          <div className={`w-6 h-0.5 bg-black transition-all ${menuOpen ? "-rotate-45 -translate-y-1.5" : ""}`} />
+        </button>
       </div>
     </div>
   );
 };
 
 export default TopBar;
-
-// bg-[#370f02] border-b border-[rgba(247,109,54,0.15)]

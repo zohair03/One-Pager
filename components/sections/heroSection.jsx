@@ -4,6 +4,7 @@ import PrimaryBtn from "../ui/buttons/primaryBtn";
 import SecondaryBtn from "../ui/buttons/secondaryBtn";
 import HeroHeading from "../ui/texts/HeroHeading";
 import HeroSubtitle from "../ui/texts/HeroSubtitle";
+import { GlassBtn } from "../ui/buttons/GlassBtn";
 
 
 const Hero = () => {
@@ -18,7 +19,7 @@ const Hero = () => {
 
 
   return (
-    <section className="bg-[url('/images/rn-infotech-25.webp')] bg-cover bg-center h-[92vh] relative flex flex-col items-center justify-center max-[380px]:px-4 p-8 py-12 overflow-hidden bg-black">
+    <section className="bg-[url('/images/rn-infotech-17.webp')] bg-cover bg-center h-[92vh] relative flex flex-col items-center justify-center max-[380px]:px-4 p-8 py-12 overflow-hidden bg-black">
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-[1]" />
@@ -43,11 +44,14 @@ const Hero = () => {
           style={{ transitionDelay: "400ms" }}
         >
           <PrimaryBtn href="/" btnText="View Services" custom="text-white" />
-          <SecondaryBtn
+          {/* <SecondaryBtn
             href="/"
             custom="border border-light-blue"
             btnText="Shop Now"
-          />
+          /> */}
+          <GlassBtn className="text-white flex items-center justify-center font-semibold gap-4 max-sm:mb-[0px]">
+            Shecdule Now
+          </GlassBtn> 
         </div>
       </div>
     </section>

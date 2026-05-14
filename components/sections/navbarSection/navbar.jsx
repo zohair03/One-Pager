@@ -7,9 +7,9 @@ import TopBar from "./topBar";
 import NavLinks from "./navLinks";
 import MegaMenu from "./megaMenu";
 import MobileMenu from "./mobileMenu";
-import CallButton from "../../ui/buttons/callButton";
-import { GlassBtn } from "../../ui/buttons/GlassBtn";
 import PrimaryBtn from "../../ui/buttons/primaryBtn";
+import CallButton from "../../ui/buttons/callButton";
+import TertiaryBtn from "../../ui/buttons/TertiaryBtn";
 import { aboutLinks, servicesLinks } from "./navData";
 
 const Navbar = () => {
@@ -19,14 +19,15 @@ const Navbar = () => {
   const [megaClosing, setMegaClosing] = useState(false);
   const [navbarBottom, setNavbarBottom] = useState(0);
   const navbarRef = useRef(null);
-  const closeTimeoutRef = useRef(null); // ← timeout ref to cancel close
+  const closeTimeoutRef = useRef(null);
   const pathname = usePathname();
 
-  // Close mega menu on route change
   useEffect(() => {
     setActiveMega(null);
     setMegaClosing(false);
+    setMenuOpen(false);
   }, [pathname]);
+
 
   const updateNavbarBottom = () => {
     if (navbarRef.current) {
@@ -50,18 +51,19 @@ const Navbar = () => {
     };
   }, []);
 
-  const openMenu = () => setMenuOpen(true);
-
-  const closeMenu = () => {
-    setMenuClosing(true);
-    setTimeout(() => {
-      setMenuOpen(false);
-      setMenuClosing(false);
-    }, 300);
+  const toggleMenu = () => {
+    if (menuOpen) {
+      setMenuClosing(true);
+      setTimeout(() => {
+        setMenuOpen(false);
+        setMenuClosing(false);
+      }, 300);
+    } else {
+      setMenuOpen(true);
+    }
   };
 
   const openMega = (name) => {
-    // Cancel any pending close when opening
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
@@ -72,18 +74,16 @@ const Navbar = () => {
   };
 
   const closeMega = () => {
-    // Delay close so cursor has time to reach mega menu portal
     closeTimeoutRef.current = setTimeout(() => {
       setMegaClosing(true);
       setTimeout(() => {
         setActiveMega(null);
         setMegaClosing(false);
       }, 300);
-    }, 100); // ← 100ms delay before starting close
+    }, 100);
   };
 
   const cancelClose = (name) => {
-    // Cancel close when cursor enters mega menu
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
@@ -92,79 +92,58 @@ const Navbar = () => {
     setActiveMega(name);
   };
 
-  // Cleanup timeout on unmount
-  useEffect(() => {
-    return () => {
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <nav>
-      <div className="fixed top-0 z-50 w-full font-sans" ref={navbarRef}>
+    <nav className="">
+      <div 
+        className="top-0 inset-x-0 fixed z-50 font-sans" 
+        ref={navbarRef}
+      >
+        {/* Row 1: TopBar (Responsive logic inside TopBar) */}
+        <TopBar menuOpen={menuOpen} toggleMenu={toggleMenu} />
 
-        <TopBar />
-
-        {/* Main Navbar — Liquid Glass */}
-        <div
-          className="relative flex justify-between items-center px-4 md:px-8 2xl:px-30 py-3 md:py-2"
-          onMouseLeave={closeMega}
-        >
-          {/* Logo */}
-          <div className="liquid-glass-strong-light rounded-full px-5 py-4 flex items-center justify-center">
-            <Link href="/" className="text-base font-serif leading-none text-white">
-              {/* <Image
-                src="/images/logo.png"
-                alt="Company Logo"
-                width={200}
-                height={200}
-                className="h-auto w-[140px] md:w-[180px]"
-              /> */}
-              RN Infotech
+        {/* Row 2 (Desktop) / Rows 2 & 3 (Mobile) */}
+        <div className="liquid-glass-strong-light bg-black/20 rounded-b-xl mx-1 relative px-4 md:px-8 2xl:px-30 py-4 lg:py-3">
+          
+          {/* Desktop Layout */}
+          <div className="hidden lg:flex justify-between items-center" onMouseLeave={closeMega}>
+            {/* Logo */}
+            <Link href="/" className="text-xl font-serif leading-relaxed text-[#7B52AB] tracking-tighter uppercase leading-none">
+              Skin<br />Method
             </Link>
+
+            {/* Desktop Nav Links */}
+            <div className="flex-1 flex justify-center">
+              <NavLinks activeMega={activeMega} setActiveMega={openMega} />
+            </div>
+
+            {/* CTA Button */}
+            <PrimaryBtn btnText="Contact Us" custom=""/>
           </div>
 
-          {/* Desktop Nav Links */}
-          <NavLinks activeMega={activeMega} setActiveMega={openMega} />
+          {/* Mobile Layout */}
+          <div className="lg:hidden flex justify-between items-center gap-3">
+            {/* Mobile Logo (Centered) */}
+            <div className="flex justify-center">
+              <Link href="/" className="text-sm md:text-lg leading-relaxed font-serif font-black text-[#7B52AB] tracking-tighter uppercase leading-none text-center">
+                RN<br />Infotech
+              </Link>
+            </div>
 
-          {/* Desktop CTA Button */}
-          {/* <div className="hidden lg:block">
-            <CallButton btnText="Call Us Now" />
-          </div> */}
-          {/* <GlassBtn className="text-white flex items-center justify-center font-semibold gap-4 max-sm:mb-[0px]">
-            Our Services
-          </GlassBtn> */}
-          <PrimaryBtn btnText="Our Services" />
-
-          {/* Hamburger Button */}
-          <button
-            className="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer bg-transparent border border-white/10 rounded-md transition-all duration-250 hover:border-primary/40 hover:shadow-[0_0_12px_rgba(247,109,54,0.15)]"
-            onClick={() => (menuOpen ? closeMenu() : openMenu())}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
-          >
-            <span
-              className={`block w-[22px] h-0.5 bg-white/85 rounded-sm transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-            />
-            <span
-              className={`block w-[22px] h-0.5 bg-white/85 rounded-sm transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
-            />
-            <span
-              className={`block w-[22px] h-0.5 bg-white/85 rounded-sm transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-            />
-          </button>
+            {/* Mobile Buttons (Side by Side) */}
+            <div className="flex flex-col items-center justify-center gap-3">
+              <CallButton btnText="Call Us Now" custom={{ paddingInline: 'calc(var(--spacing) * 2)', width: '175px' }}/>
+              {/* <TertiaryBtn btnText="Contact Us" custom="sm:w-fit" /> */}
+            </div>
+          </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Overlay */}
         {menuOpen && (
-          <MobileMenu closeMenu={closeMenu} isClosing={menuClosing} />
+          <MobileMenu closeMenu={toggleMenu} isClosing={menuClosing} />
         )}
       </div>
 
-      {/* Mega Menus */}
+      {/* Mega Menus Portals */}
       {activeMega === "about" && (
         <MegaMenu
           items={aboutLinks}

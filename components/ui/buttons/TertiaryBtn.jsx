@@ -5,7 +5,7 @@ const TertiaryBtn = ({ href, btnText, custom }) => {
   return (
     <Link
       href={href ? href : "/"}
-      className={`btn-press cursor-pointer font-serif font-extralight text-[12px] border border-white/20 text-white rounded-full bg-white/5 backdrop-blur-xl hover:bg-white/15 hover:border-white/30 px-8 flex items-center justify-center transition-all ease-in-out duration-300 w-full md:w-fit min-h-[50px] liquid-glass-btn ${custom}`}
+      className={`${custom} border border-white text-white bg-transparent hover:bg-white/30 hover:backdrop-blur-lg cursor-pointer font-serif font-extralight text-[12px] rounded-full px-8 transition-all ease-in-out duration-300 min-w-[90%] md:min-w-[220px] min-h-[50px] flex items-center justify-center relative overflow-hidden btn-primary btn-press`}
     >
       {btnText}
     </Link>

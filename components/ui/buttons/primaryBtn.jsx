@@ -3,11 +3,11 @@ import React from "react";
 
 // Theme colors — change here to retheme
 const theme = {
-  bg:          "liquid-glass-strong-light",
-  bgHover:     "liquid-glass-strong-light",
+  bg:          "bg-[#e8643a] liquid-glass-strong-light",
+  bgHover:     "hover:bg-[#f7875b]",
   bgDisabled:  "disabled:bg-gray-400",
-  text:        "text-black",
-  textHover:   "hover:text-black",
+  text:        "text-[#1a0a04]",
+  textHover:   "hover:text-[#1a0a04]",
 };
 
 const sharedClasses = `
@@ -16,7 +16,7 @@ const sharedClasses = `
   min-w-[90%] md:min-w-[220px] min-h-[50px]
   flex items-center justify-center
   relative overflow-hidden
-  btn-primary btn-press liquid-glass-btn
+  btn-primary btn-press
 `;
 
 const PrimaryBtn = ({ btnText, onClick, href, custom, type, disabled }) => {

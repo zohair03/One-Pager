@@ -11,11 +11,11 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
   return (
     <>
       {/* Backdrop - click outside to close */}
-      <div className="fixed inset-0 z-40" onClick={closeMenu} />
+      <div className="fixed inset-0 z-[-1] bg-black/20 backdrop-blur-sm" onClick={closeMenu} />
 
       {/* Menu Panel — Liquid Glass */}
       <div
-        className={`relative z-50 lg:hidden liquid-glass-dark flex flex-col items-center gap-2 py-8 text-white font-semibold text-lg ${
+        className={`liquid-glass-strong-light mx-2 mt-[-5px] z-[-1] rounded-b-xl relative lg:hidden flex flex-col items-center gap-2 py-8 text-white font-semibold text-lg ${
           isClosing ? "animate-slideUp" : "animate-slideDown"
         }`}
         style={{ maxHeight: "75vh", overflowY: "auto" }}
@@ -23,7 +23,6 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
         {/* Home */}
         <Link
           href="/"
-          onClick={closeMenu}
           className="w-full text-center py-3 hover:text-primary transition-colors"
         >
           HOME
@@ -34,7 +33,6 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
           <div className="flex items-center justify-center gap-2">
             <Link
               href="/"
-              onClick={closeMenu}
               className="py-3 hover:text-primary transition-colors"
             >
               ABOUT
@@ -59,14 +57,14 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
             <div className="flex flex-col items-center gap-2 pb-3 animate-slideDown">
               {aboutLinks.map((link) => (
                 <Link
-                  key={link.href}
+                  key={link.title}
                   href={link.href}
-                  onClick={closeMenu}
                   className="text-base font-normal text-white/90 hover:text-primary transition-colors py-1"
                 >
                   {link.title}
                 </Link>
               ))}
+
             </div>
           )}
         </div>
@@ -101,14 +99,14 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
             <div className="flex flex-col items-center gap-2 pb-3 animate-slideDown">
               {servicesLinks.map((link) => (
                 <Link
-                  key={link.href}
+                  key={link.title}
                   href={link.href}
-                  onClick={closeMenu}
                   className="text-base font-normal text-white/90 hover:text-primary transition-colors py-1"
                 >
                   {link.title}
                 </Link>
               ))}
+
             </div>
           )}
         </div>
@@ -116,7 +114,6 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
         {/* Gallery */}
         <Link
           href="/"
-          onClick={closeMenu}
           className="w-full text-center py-3 hover:text-primary transition-colors"
         >
           GALLERY
@@ -125,7 +122,6 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
         {/* Contact */}
         <Link
           href="/"
-          onClick={closeMenu}
           className="w-full text-center py-3 hover:text-primary transition-colors"
         >
           CONTACT
